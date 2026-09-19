@@ -1,6 +1,9 @@
 import { menuHariIni } from "@/data/menu";
 
-export default function Home() {
+export default async function DapurPage({ params }: { params: Promise<{ id: string }> }) {
+  // Nilai 'id' bisa berisi "1", "2", "baktijaya-1", "sukamaju-2", dll.
+  const { id } = await params;
+
   return (
     <main className="min-h-screen bg-slate-50 pb-10 flex flex-col items-center">
       {/* Header Branding MBG */}
@@ -9,7 +12,7 @@ export default function Home() {
           Menu Hari Ini
         </h1>
         <p className="text-xs sm:text-base lg:text-xl text-blue-200 mt-1 font-medium">
-          SPPG #[id]
+          SPPG {id}
         </p>
       </header>
 
@@ -23,7 +26,7 @@ export default function Home() {
             <img
               src={menuHariIni.fotoUrl}
               alt={menuHariIni.namaMenu}
-              className="w-full h-full object-cover"
+              className="w-full h-auto max-h-[75vh] object-contain mx-auto"
             />
           </div>
 
