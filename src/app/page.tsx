@@ -6,7 +6,7 @@ export default function Home() {
       {/* Header Branding MBG */}
       <header className="w-full bg-blue-900 text-white py-6 px-4 text-center shadow-md border-b-4 border-blue-500">
         <h1 className="text-xl font-black tracking-wide uppercase">
-          Makan Bergizi Gratis
+          Makan Hari Ini
         </h1>
         <p className="text-xs text-blue-200 mt-1 font-medium">
           Portal Menu Harian Siswa

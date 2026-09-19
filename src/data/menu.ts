@@ -11,7 +11,7 @@ export const menuHariIni: MenuItem = {
     id: "1",
     tanggal: "Jumat, 14 Juni 2024",
     namaMenu: "Nasi Goreng Spesial",
-    fotoUrl: "/nasi-goreng.jpg",
+    fotoUrl: "/Menu.jpeg",
     deskripsi: "Nasi goreng spesial dengan bumbu rahasia dan topping ayam suwir.",
     komposisi: ["Nasi", "Ayam", "Telur", "Bawang Merah", "Bawang Putih", "Kecap Manis", "Sambal"]
 };

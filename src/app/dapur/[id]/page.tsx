@@ -1,20 +1,32 @@
-// src/app/dapur/[id]/page.tsx
+import { menuHariIni } from "@/data/menu";
 
-export default async function DapurPage({ params }: { params: Promise<{ id: string }> }) {
-  // Mengambil ID dapur dari URL (misal: /dapur/1, /dapur/2)
-  const { id } = await params;
-
+export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-900 text-white p-8 flex flex-col items-center justify-center">
-      <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700 max-w-md w-full text-center">
-        <h1 className="text-2xl font-bold text-blue-400">Halaman Dapur #{id}</h1>
-        <p className="text-slate-400 text-sm mt-2">
-          Halaman ini menampilkan menu harian khusus untuk Unit Dapur MBG No. {id}.
+    <main className="min-h-screen bg-slate-50 pb-10 flex flex-col items-center">
+      {/* Header Branding MBG */}
+      <header className="w-full bg-blue-900 text-white py-6 px-4 text-center shadow-md border-b-4 border-blue-500">
+        <h1 className="text-xl sm:text-2xl lg:text-3xl font-black tracking-wide uppercase">
+          Menu Hari Ini
+        </h1>
+        <p className="text-xs sm:text-base lg:text-xl text-blue-200 mt-1 font-medium">
+          SPPG #[id]
         </p>
+      </header>
 
-        {/* Nanti di sini tempat menampilkan gambar menu dari Database berdasarkan ID Dapur */}
-        <div className="mt-6 p-4 bg-slate-900 rounded-xl border border-slate-800">
-          <p className="text-xs text-slate-500">Foto Menu Dapur {id} akan dirender di sini</p>
+      {/* Main Container (Mobile Viewport Optimized) */}
+      <div className="w-full max-w-md md:max-w-2xl lg:max-w-2.5xl px-4 mt-6">
+        {/* Card Utama */}
+        <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 p-2 sm:p-4">
+
+          {/* Foto Menu Utama */}
+          <div className="relative h-auto w-full bg-slate-200 overflow-hidden rounded-xl">
+            <img
+              src={menuHariIni.fotoUrl}
+              alt={menuHariIni.namaMenu}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
         </div>
       </div>
     </main>
